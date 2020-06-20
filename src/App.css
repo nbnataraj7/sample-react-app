@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #eeeeee;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 75px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-pane {
+  width: 18%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-pane ul {
+  list-style-type: none;
+  padding-left: 1.5em;
+}
+
+.left-pane>ul {
+  margin-right: 20px;
+  height: 95%;
+  border-right: 0.5px solid #c6bcbc;
+}
+
+.left-pane ul li {
+  padding: 5px;
+  cursor: pointer;
+  margin: 5px;
+  box-sizing: border-box;
+  color: #8680ca;
+}
+
+.left-pane ul li:hover,
+nav a.nav-item:hover {
+  color: #565098;
+}
+
+.content {
+  flex: auto;
+}
+
+header {
+  height: 75px;
+  background-color: #f9f9f9;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  height: 75%;
+}
+
+.logo-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: start;
+  width: 18%;
+  padding-left: 25px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  flex: auto;
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a.nav-item {
+  text-decoration: none;
+  height: 75px;
+  display: inline-flex;
+  line-height: 75px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  color: #8680ca;
+}
+
+.card-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 25px;
+  margin: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: #e5e6e8;
+  cursor: pointer;
+  color: #525371;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 5px 0px #e0dfdf;
+}
+
+.card-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  font-size: 14px;
 }
